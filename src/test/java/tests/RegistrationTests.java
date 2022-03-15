@@ -17,8 +17,10 @@ public class RegistrationTests extends Methods {
         type(By.cssSelector("#lastName"),"Lorder");
         type(By.cssSelector("#email"),"lordera@mail.ru");
         type(By.cssSelector("#password"),"Mmetro1!");
-
-        WebElement y = wd.findElement(By.cssSelector("[formcontrolname='termsOfUse']"));
+        click(By.xpath("//*[text()=' and ']"));
+        click(By.xpath("//*[@class='checkbox-label terms-label']"));
+//        WebElement y = wd.findElement(By.cssSelector("[formcontrolname='termsOfUse']"));
+//        y.click();
 
 
         //  WebElement n = wd.findElement(By.xpath("//input[@class='ng-dirty ng-touched ng-invalid']"));
