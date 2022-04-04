@@ -1,50 +1,67 @@
 package tests;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import models.User;
+import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import java.util.List;
-
 public class RegistrationTests extends Methods {
+    @BeforeMethod
+    public void preCondition(){
+        if(app.getUser().isLoginSuccess())
+        {
+            app.getUser().logout();
+        }
+    }
+
     @Test
     public void regSuccess()
     {
-        click(By.cssSelector("[href='/login?url=%2Fsearch']"));
-        click(By.xpath("//*[text()='Click here']"));
-        type(By.cssSelector("#name"),"Anna");
-        type(By.cssSelector("#lastName"),"Lorder");
-        type(By.cssSelector("#email"),"lordera@mail.ru");
-        type(By.cssSelector("#password"),"Mmetro1!");
-        click(By.xpath("//*[text()=' and ']"));
-        click(By.xpath("//*[@class='checkbox-label terms-label']"));
-//        WebElement y = wd.findElement(By.cssSelector("[formcontrolname='termsOfUse']"));
-//        y.click();
+        int index = (int)System.currentTimeMillis()/1000%3600;
+        app.getUser().openRegistrationForm();
+        app.getUser().fillRegistrationForm("Anna","Lomar", "akdx"+index+"zc@gmail.com","Zcvbb2ds2!");
+      //  app.getUser().checkPolice();
+        app.getUser().checkPoliceXY();
+        app.getUser().submit();
+        Assert.assertEquals(app.getUser().checkMessage(),"You are logged in success");
 
-
-        //  WebElement n = wd.findElement(By.xpath("//input[@class='ng-dirty ng-touched ng-invalid']"));
-//        if(n != null)
-//        {
-//            n.click();
-//        }
-//        System.out.println(n);
-        //  click(By.cssSelector("input[type='checkbox']"));
-//        List<WebElement> elementList=  wd.findElements(By.cssSelector(".ng-dirty.ng-touched.ng-invalid"));
-//        elementList.get(0).click();
-//        System.out.println(elementList.size());
-
-       // click(By.cssSelector("#terms-of-use"));
-      //  click(By.xpath("//*[@class='ng-dirty ng-touched ng-valid']"));
-      // click(By.xpath("//*[@class='checkbox-container']"));
-       // click(By.xpath("//*[@class='checkbox-label terms-label']"));
-
-
-//      for(WebElement e:elementList)
-//      {
-//          System.out.println(e);
-//      }
-    // elementList.get(1).click();
-   //     elementList.get(2).click();
     }
+    @Test
+    public void regSuccessModel()
+    {
+        int index = (int)System.currentTimeMillis()/1000%3600;
+        User user = new User().withName("Anna").withLastname("Lomar").withEmail("akdx"+index+"zc@gmail.com").withPassword("Zcvbb2ds2!");
+
+        app.getUser().openRegistrationForm();
+        app.getUser().fillRegistrationForm(user);
+        //  app.getUser().checkPolice();
+        app.getUser().checkPoliceXY();
+        app.getUser().submit();
+        app.getUser().pause(1000);
+        Assert.assertEquals(app.getUser().checkMessage(),"You are logged in success");
+
+    }
+    @Test
+    public void regSuccessWrongPasswordModel()
+    {
+
+        User user = new User().withName("Anna").withLastname("Lomar").withEmail("akdxzc@gmail.com").withPassword("12345");
+
+        app.getUser().openRegistrationForm();
+        app.getUser().fillRegistrationForm(user);
+        app.getUser().checkPoliceXY();
+        Assert.assertTrue(app.getUser().isErrorPasswordDisplayed());
+        Assert.assertTrue(app.getUser().isErrorPasswordDisplayedSize());
+        Assert.assertFalse(app.getUser().isYallaButtonNotActive());
+        Assert.assertTrue(app.getUser().isYallaButtonNotClickable());
+    }
+    @AfterMethod
+    public void postCondition()
+    {
+        app.getUser().submitOkButton();
+    }
+
+
+
 }
