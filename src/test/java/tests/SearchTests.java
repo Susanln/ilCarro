@@ -20,6 +20,12 @@ public class SearchTests extends Methods{
         app.getSearch().searchCurrentMonthInPast("Tel Aviv","2/1/2022","4/20/2022");
 
         Assert.assertTrue(app.getSearch().isYallaButtonNotClickable());
+        Assert.assertTrue(app.getSearch().isPeriodInPast());
 
+    }
+    @Test
+    public void searchAnyPeriod(){
+        app.getSearch().searchAnyPeriod("Tel Aviv","04/05/2022","04/05/2023");
+        app.getSearch().submit();
     }
 }

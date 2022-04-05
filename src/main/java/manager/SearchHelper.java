@@ -2,6 +2,9 @@ package manager;
 
 import org.openqa.selenium.*;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+
 public class SearchHelper extends HelperBase{
 
     public SearchHelper(WebDriver wd) {
@@ -51,5 +54,57 @@ public class SearchHelper extends HelperBase{
 
     public void switchToGeneral() {
         click(By.cssSelector("[alt='logo']"));
+    }
+
+    public void searchAnyPeriod(String city, String from, String to) {
+        typeCity(city);
+        selectPeriodAnyData(from,to);
+    }
+
+    private void selectPeriodAnyData(String from, String to) {
+        LocalDate now = LocalDate.now();
+        LocalDate f = LocalDate.parse(from,DateTimeFormatter.ofPattern("MM/dd/yyyy"));
+        LocalDate t = LocalDate.parse(to, DateTimeFormatter.ofPattern("MM/dd/yyyy"));
+        click(By.id("dates"));
+        int diffYear;
+        int diffMonth;
+        diffYear=f.getYear()-now.getYear();
+        if(diffYear==0)
+        {
+            diffMonth=f.getMonthValue()-now.getMonthValue();
+        }
+        else{
+            diffMonth=12-now.getMonthValue()+ f.getMonthValue();
+        }
+        clickByNextMonth(diffMonth);
+        String locator = String.format("//div[text()=' %s ']",f.getDayOfMonth());
+        click(By.xpath(locator));
+
+
+        diffYear = t.getYear()-f.getYear();
+        if(diffYear==0)
+        {
+            diffMonth=t.getMonthValue()-f.getMonthValue();
+        }
+        else{
+            diffMonth=12-f.getMonthValue()+t.getMonthValue();
+        }
+        clickByNextMonth(diffMonth);
+        locator = String.format("//div[text()=' %s ']",t.getDayOfMonth());
+        click(By.xpath(locator));
+    }
+
+    private void clickByNextMonth(int count) {
+        for (int i = 0; i < count; i++) {
+            click(By.xpath("//button[@aria-label='Next month']"));
+        }
+    }
+
+    public boolean isPeriodInPast() {
+        WebElement el = wd.findElement(By.xpath("//div[@class='ng-star-inserted']"));
+        String error = el.getText();
+        System.out.println(error);
+        return error.equals("You can't pick date before today");
+
     }
 }
