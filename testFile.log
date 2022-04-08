@@ -1,0 +1,10 @@
+1638 [Test worker] INFO  manager.ApplicationManager - All tests start in ChromeDriver
+3101 [Test worker] INFO  tests.Methods - Start test --->public void tests.LoginTests.loginSuccess()
+8163 [Test worker] INFO  tests.Methods - Start test LoginSuccess
+8164 [Test worker] INFO  tests.Methods - The test starts with data[qdas1@mail.ru] & [Qweasd12]
+10610 [Test worker] INFO  tests.Methods - Test passed
+11:07:34.520 INFO  manager.ApplicationManager - All tests start in ChromeDriver
+11:07:35.981 INFO  tests.Methods - Start test --->public void tests.LoginTests.loginSuccess()
+11:07:41.041 INFO  tests.Methods - Start test LoginSuccess
+11:07:41.041 INFO  tests.Methods - The test starts with data[qdas1@mail.ru] & [Qweasd12]
+11:07:43.475 INFO  tests.Methods - Test passed

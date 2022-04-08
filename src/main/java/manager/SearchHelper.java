@@ -34,6 +34,14 @@ public class SearchHelper extends HelperBase{
     private void typePeriodInPast(String from, String to) {
        // JavascriptExecutor executor= (JavascriptExecutor) wd;
        // executor.executeScript("document.querySelector('#dates').value='"+from + " - "+ to+"';");
+
+        String osname =System.getProperty("os.name");
+        System.out.println(osname);
+        if(osname.startsWith("Windows"))
+        {
+
+        }
+
         WebElement toClear = wd.findElement(By.cssSelector("#dates"));
         toClear.sendKeys(Keys.CONTROL + "a");
         toClear.sendKeys(Keys.DELETE);

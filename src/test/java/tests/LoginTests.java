@@ -16,17 +16,20 @@ public class LoginTests extends Methods {
        if(app.getUser().isLoginSuccess())
        {
            app.getUser().logout();
+           logger.info("Test needs logout");
        }
     }
     @Test
     public void loginSuccess()
-    {
+    {   logger.info("Start test LoginSuccess");
+        logger.info("The test starts with data[qdas1@mail.ru] & [Qweasd12]");
         app.getUser().openLoginForm();
         app.getUser().fillLoginForm("qdas1@mail.ru","Qweasd12");
         app.getUser().submit();
         app.getUser().pause(1000);
         Assert.assertEquals(app.getUser().checkMessage(),"Logged in success");
         app.getUser().submitOkButton();
+        logger.info("Test passed");
     }
     @Test
     public void loginSuccessModel()

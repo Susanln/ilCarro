@@ -2,10 +2,21 @@ package tests;
 
 
 import manager.ApplicationManager;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
 
+import java.lang.reflect.Method;
+
 public class Methods {
+    Logger logger = LoggerFactory.getLogger(Methods.class);
+    @BeforeMethod
+    public void startLogger(Method m){
+        logger.info("Start test --->" + m);
+    }
+
     protected static ApplicationManager app = new ApplicationManager();
     @BeforeSuite
     public void setUp()

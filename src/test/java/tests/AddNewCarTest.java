@@ -9,6 +9,7 @@ import org.testng.annotations.Test;
 public class AddNewCarTest extends Methods{
     @BeforeMethod
     public void preCondition(){
+
         if(app.getUser().isLoginSuccess()==false)
         {
             User user= new User().withEmail("qdas1@mail.ru").withPassword("Qweasd12");
@@ -16,7 +17,9 @@ public class AddNewCarTest extends Methods{
          app.getUser().fillLoginForm(user);
          app.getUser().submit();
          app.getUser().submitOkButton();
+         logger.info("Test start with user--> " + user.getName());
         }
+
     }
     @Test
     public void addNewCarSuccess(){
@@ -29,6 +32,7 @@ public class AddNewCarTest extends Methods{
         app.getCar().openCarForm();
         app.getCar().fillCarForm(car);
         app.getCar().attachPhoto("D:/download.jpg");
+        logger.info("Attacj photo-->"+ "D:/download.jpg");
         app.getUser().pause(2000);
         app.getCar().submit();
         app.getCar().submitOkbutton();
