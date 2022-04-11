@@ -46,7 +46,7 @@ public class SearchHelper extends HelperBase{
         toClear.sendKeys(Keys.CONTROL + "a");
         toClear.sendKeys(Keys.DELETE);
         type(By.cssSelector("#dates"),from+" - "+to);
-
+        takeScreenShot("src/test/screenshots/screen.png");
 
     }
 

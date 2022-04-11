@@ -1,0 +1,2 @@
+13:29:55.579 INFO  manager.ApplicationManager - All tests start in 'ChromeDriver'
+13:29:57.312 INFO  tests.Methods - Start test --->public void tests.LoginTests.loginSuccessModel()

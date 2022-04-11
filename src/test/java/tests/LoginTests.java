@@ -43,6 +43,7 @@ public class LoginTests extends Methods {
         Assert.assertEquals(app.getUser().checkMessage(),"Logged in success");
         app.getUser().submitOkButton();
     }
+    @Test
     public void loginSuccessNew()
     {
         app.getUser().openLoginForm();
