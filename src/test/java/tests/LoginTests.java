@@ -1,5 +1,6 @@
 package tests;
 
+import manager.MyDataProvider;
 import models.User;
 import org.openqa.selenium.By;
 import org.testng.Assert;
@@ -19,12 +20,12 @@ public class LoginTests extends Methods {
            logger.info("Test needs logout");
        }
     }
-    @Test
-    public void loginSuccess()
+    @Test(dataProvider = "validLoginData",dataProviderClass = MyDataProvider.class)
+    public void loginSuccess(String email,String password)
     {   logger.info("Start test LoginSuccess");
-        logger.info("The test starts with data[qdas1@mail.ru] & [Qweasd12]");
+        logger.info("The test starts with email: "+email + "Password: " + password);
         app.getUser().openLoginForm();
-        app.getUser().fillLoginForm("qdas1@mail.ru","Qweasd12");
+        app.getUser().fillLoginForm(email,password);
         app.getUser().submit();
         app.getUser().pause(1000);
         Assert.assertEquals(app.getUser().checkMessage(),"Logged in success");
@@ -43,11 +44,11 @@ public class LoginTests extends Methods {
         Assert.assertEquals(app.getUser().checkMessage(),"Logged in success");
         app.getUser().submitOkButton();
     }
-    @Test
-    public void loginSuccessNew()
+    @Test(dataProvider = "validLoginData", dataProviderClass = MyDataProvider.class)
+    public void loginSuccessNew(String email,String password)
     {
         app.getUser().openLoginForm();
-        app.getUser().fillLoginForm("qdas1@mail.ru","Qweasd12");
+        app.getUser().fillLoginForm(email,password);
         app.getUser().submit();
         app.getUser().pause(1000);
         Assert.assertEquals(app.getUser().checkMessage(),"Logged in success");

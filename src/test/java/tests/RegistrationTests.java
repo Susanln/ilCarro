@@ -1,5 +1,6 @@
 package tests;
 
+import manager.MyDataProvider;
 import models.User;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
@@ -55,6 +56,18 @@ public class RegistrationTests extends Methods {
         Assert.assertTrue(app.getUser().isErrorPasswordDisplayedSize());
         Assert.assertFalse(app.getUser().isYallaButtonNotActive());
         Assert.assertTrue(app.getUser().isYallaButtonNotClickable());
+    }
+    @Test(dataProvider = "validRegData", dataProviderClass = MyDataProvider.class)
+    public void regSuccessWithMyData(String name,String lastName,String email,String password)
+    {
+        int index = (int)System.currentTimeMillis()/1000%3600;
+        app.getUser().openRegistrationForm();
+        app.getUser().fillRegistrationForm(name,lastName,email,password);
+        //  app.getUser().checkPolice();
+        app.getUser().checkPoliceXY();
+        app.getUser().submit();
+        Assert.assertEquals(app.getUser().checkMessage(),"You are logged in success");
+
     }
     @AfterMethod
     public void postCondition()

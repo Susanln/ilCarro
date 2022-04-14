@@ -1,5 +1,6 @@
 package tests;
 
+import manager.MyDataProvider;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -25,7 +26,12 @@ public class SearchTests extends Methods{
     }
     @Test
     public void searchAnyPeriod(){
-        app.getSearch().searchAnyPeriod("Tel Aviv","04/05/2022","04/05/2023");
+        app.getSearch().searchAnyPeriod("Tel Aviv","05/05/2022","04/05/2023");
+        app.getSearch().submit();
+    }
+    @Test(dataProvider = "validSearchData",dataProviderClass = MyDataProvider.class)
+    public void searchAnyPeriodWithMyData(String city,String from,String to){
+        app.getSearch().searchAnyPeriod(city,from,to);
         app.getSearch().submit();
     }
 }

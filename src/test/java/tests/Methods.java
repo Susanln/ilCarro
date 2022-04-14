@@ -22,6 +22,7 @@ public class Methods {
     public void setUp()
     {
        app.init();
+
     }
     @AfterSuite
     public void tearDown(){

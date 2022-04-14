@@ -14,9 +14,34 @@ public class CarHelper extends HelperBase{
     }
 
     public void openCarForm() {
+        pause(1000);
         new WebDriverWait(wd, 20).until(ExpectedConditions.visibilityOf(wd.findElement(By.id("1")))).click();
     }
+    public void fillCarForm2(String address, String make, String model, String year, String engine, String fuel
+            ,String gear,String wD, String doors, String seats, String carClass, String fuelConsumption, String carRegNumber,
+                             String price,String distanceIncluded, String features, String about) {
+        typeLocation(address);
+        type(By.id("make"), make);
+        type(By.id("model"),model);
+        type(By.id("year"),year);
+        type(By.id("engine"),engine);
 
+        select(By.id("fuel"),fuel);
+        select(By.id("gear"),gear);
+        select(By.id("wheelsDrive"),wD);
+
+        type(By.id("doors"),doors);
+        type(By.id("seats"),seats);
+        type(By.id("class"),carClass);
+        type(By.id("fuelConsumption"),fuelConsumption);
+        type(By.id("serialNumber"),carRegNumber);
+        type(By.id("price"),price);
+        type(By.id("distance"),distanceIncluded);
+        type(By.id("about"),about);
+        type(By.cssSelector("[placeholder='Type feature']"),features);
+        click(By.xpath("//*[text()='Add feature']"));
+
+    }
     public void fillCarForm(Car car) {
         typeLocation(car.getAddress());
         type(By.id("make"), car.getMake());
@@ -66,7 +91,7 @@ public class CarHelper extends HelperBase{
     public boolean isCarAdded() {
         new WebDriverWait(wd,10).until(ExpectedConditions.visibilityOf(wd.findElement(By.cssSelector("div.dialog-container"))));
    String message = wd.findElement(By.cssSelector("div.dialog-container h1")).getText();
-   click(By.xpath("//button[text()='Search cars']"));
+   //click(By.xpath("//button[text()='Search cars']"));
     return message.equals("Car added");
     }
 //    private void multySelect(By locator, String options)

@@ -24,14 +24,14 @@ public class UserHelper extends HelperBase{
     }
 
     public void openLoginForm() {
-        click(By.cssSelector("[href='/login?url=%2Fsearch']"));
+        click(By.xpath("//*[text()=' Log in ']"));
     }
 
     public boolean isLoginSuccess(){
         return isElementPresent(By.xpath("//*[text()=' Logout ']"));
     }
     public void openRegistrationForm() {
-        click(By.cssSelector("[href='/login?url=%2Fsearch']"));
+        click(By.xpath("//*[text()=' Log in ']"));
         click(By.xpath("//*[text()='Click here']"));
     }
     public void fillRegistrationForm(String name, String lastname, String email, String password) {
