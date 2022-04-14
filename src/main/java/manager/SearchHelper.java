@@ -41,12 +41,12 @@ public class SearchHelper extends HelperBase{
         {
 
         }
-
+        LocalDate now = LocalDate.now();
         WebElement toClear = wd.findElement(By.cssSelector("#dates"));
         toClear.sendKeys(Keys.CONTROL + "a");
         toClear.sendKeys(Keys.DELETE);
         type(By.cssSelector("#dates"),from+" - "+to);
-        takeScreenShot("src/test/screenshots/screen.png");
+        takeScreenShot("src/test/screenshots/screen"+now+".png");
 
     }
 
