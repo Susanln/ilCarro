@@ -8,16 +8,12 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class AddNewCarTest extends Methods{
-    @BeforeMethod
+    @BeforeMethod(alwaysRun = true)
     public void preCondition(){
 
-        if(app.getUser().isLoginSuccess()==false)
+        if(app.getUser().isLoginUnsuccess())
         {
-            User user= new User().withEmail("qdas1@mail.ru").withPassword("Qweasd12");
-         app.getUser().openLoginForm();
-         app.getUser().fillLoginForm(user);
-         app.getUser().submit();
-         app.getUser().submitOkButton();
+         new LoginTests().loginSuccessModel();
         }
 
     }
@@ -41,7 +37,7 @@ public class AddNewCarTest extends Methods{
         Assert.assertTrue(app.getCar().isCarAdded());
 
     }
-    @Test
+    @Test(groups = {"problem"})
     public void addNewCarSuccess() {
         int index = (int) (System.currentTimeMillis() / 1000) % 36000;
         logger.info(" 'Car Reg number' 100-22" +index);

@@ -8,7 +8,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class RegistrationTests extends Methods {
-    @BeforeMethod
+    @BeforeMethod(alwaysRun = true)
     public void preCondition(){
         if(app.getUser().isLoginSuccess())
         {
@@ -44,11 +44,9 @@ logger.info("Test start with data: "+user.toString());
         Assert.assertEquals(app.getUser().checkMessage(),"You are logged in success");
 
     }
-    @Test
+    @Test(groups = {"problem"})
     public void regSuccessWrongPasswordModel()
-    {
-
-        User user = new User().withName("Anna").withLastname("Lomar").withEmail("akdxzc@gmail.com").withPassword("12345");
+    {User user = new User().withName("Anna").withLastname("Lomar").withEmail("akdxzc@gmail.com").withPassword("12345");
         logger.info("Test start with data: "+user.toString());
         app.getUser().openRegistrationForm();
         app.getUser().fillRegistrationForm(user);
@@ -70,7 +68,7 @@ logger.info("Test start with data: "+user.toString());
         Assert.assertEquals(app.getUser().checkMessage(),"You are logged in success");
 
     }
-    @AfterMethod
+    @AfterMethod(alwaysRun = true)
     public void postCondition()
     {
         app.getUser().submitOkButton();

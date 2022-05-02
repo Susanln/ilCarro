@@ -1,0 +1,77 @@
+12:59:56.230 INFO  manager.ApplicationManager - All tests start in 'ChromeDriver'
+12:59:57.816 INFO  tests.Methods - Start test --->public void tests.LoginTests.loginSuccess(java.lang.String,java.lang.String)
+12:59:57.819 INFO  manager.MyListener - Start find element--->By.xpath: //*[text()=' Logout ']
+13:00:03.780 INFO  manager.MyListener - This is the link to screen with problem--->src/test/screenshots/screen2.png
+13:00:04.281 INFO  manager.MyListener - Start find element--->By.xpath: //*[text()=' Logout ']
+13:00:10.233 INFO  manager.MyListener - This is the link to screen with problem--->src/test/screenshots/screen9.png
+13:00:10.236 INFO  tests.Methods - Finish test--->public void tests.LoginTests.loginSuccess(java.lang.String,java.lang.String)
+13:00:10.237 INFO  tests.Methods - Start test --->public void tests.LoginTests.loginSuccess(java.lang.String,java.lang.String)
+13:00:10.238 INFO  tests.Methods - Finish test--->public void tests.LoginTests.loginSuccess(java.lang.String,java.lang.String)
+13:00:10.239 INFO  tests.Methods - Start test --->public void tests.LoginTests.loginSuccess(java.lang.String,java.lang.String)
+13:00:10.240 INFO  tests.Methods - Finish test--->public void tests.LoginTests.loginSuccess(java.lang.String,java.lang.String)
+13:00:10.242 INFO  tests.Methods - Start test --->public void tests.LoginTests.loginSuccessModel()
+13:00:10.243 INFO  tests.Methods - Finish test--->public void tests.LoginTests.loginSuccessModel()
+13:00:10.243 INFO  tests.Methods - Start test --->public void tests.LoginTests.loginSuccessNew(java.lang.String,java.lang.String)
+13:00:10.244 INFO  tests.Methods - Finish test--->public void tests.LoginTests.loginSuccessNew(java.lang.String,java.lang.String)
+13:00:10.245 INFO  tests.Methods - Start test --->public void tests.LoginTests.loginSuccessNew(java.lang.String,java.lang.String)
+13:00:10.246 INFO  tests.Methods - Finish test--->public void tests.LoginTests.loginSuccessNew(java.lang.String,java.lang.String)
+13:00:10.246 INFO  tests.Methods - Start test --->public void tests.LoginTests.loginSuccessNew(java.lang.String,java.lang.String)
+13:00:10.248 INFO  tests.Methods - Finish test--->public void tests.LoginTests.loginSuccessNew(java.lang.String,java.lang.String)
+13:00:10.250 INFO  tests.Methods - Start test --->public void tests.RegistrationTests.regSuccess()
+13:00:10.251 INFO  manager.MyListener - Start find element--->By.xpath: //*[text()=' Logout ']
+13:00:16.204 INFO  manager.MyListener - This is the link to screen with problem--->src/test/screenshots/screen15.png
+13:00:16.704 INFO  manager.MyListener - Start find element--->By.xpath: //*[text()=' Logout ']
+13:00:22.624 INFO  manager.MyListener - This is the link to screen with problem--->src/test/screenshots/screen21.png
+13:00:22.627 INFO  manager.MyListener - Start find element--->By.xpath: //button[text()='Ok']
+13:00:27.683 INFO  manager.MyListener - The element  with locator--->By.xpath: //button[text()='Ok']<---was found
+13:00:27.684 INFO  tests.Methods - Finish test--->public void tests.RegistrationTests.regSuccess()
+13:00:27.684 INFO  tests.Methods - Start test --->public void tests.RegistrationTests.regSuccessModel()
+13:00:27.685 INFO  manager.MyListener - Start find element--->By.xpath: //*[text()=' Logout ']
+13:00:33.598 INFO  manager.MyListener - This is the link to screen with problem--->src/test/screenshots/screen32.png
+13:00:34.099 INFO  manager.MyListener - Start find element--->By.xpath: //*[text()=' Logout ']
+13:00:39.973 INFO  manager.MyListener - This is the link to screen with problem--->src/test/screenshots/screen39.png
+13:00:39.976 INFO  manager.MyListener - Start find element--->By.xpath: //button[text()='Ok']
+13:00:45.026 INFO  manager.MyListener - The element  with locator--->By.xpath: //button[text()='Ok']<---was found
+13:00:45.027 INFO  tests.Methods - Finish test--->public void tests.RegistrationTests.regSuccessModel()
+13:00:45.028 INFO  tests.Methods - Start test --->public void tests.RegistrationTests.regSuccessWithMyData(java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+13:00:45.029 INFO  manager.MyListener - Start find element--->By.xpath: //*[text()=' Logout ']
+13:00:50.939 INFO  manager.MyListener - This is the link to screen with problem--->src/test/screenshots/screen50.png
+13:00:51.440 INFO  manager.MyListener - Start find element--->By.xpath: //*[text()=' Logout ']
+13:00:57.358 INFO  manager.MyListener - This is the link to screen with problem--->src/test/screenshots/screen56.png
+13:00:57.360 INFO  manager.MyListener - Start find element--->By.xpath: //button[text()='Ok']
+13:01:02.414 INFO  manager.MyListener - The element  with locator--->By.xpath: //button[text()='Ok']<---was found
+13:01:02.415 INFO  tests.Methods - Finish test--->public void tests.RegistrationTests.regSuccessWithMyData(java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+13:01:02.415 INFO  tests.Methods - Start test --->public void tests.RegistrationTests.regSuccessWrongPasswordModel()
+13:01:02.416 INFO  manager.MyListener - Start find element--->By.xpath: //*[text()=' Logout ']
+13:01:08.293 INFO  manager.MyListener - This is the link to screen with problem--->src/test/screenshots/screen67.png
+13:01:08.794 INFO  manager.MyListener - Start find element--->By.xpath: //*[text()=' Logout ']
+13:01:14.712 INFO  manager.MyListener - This is the link to screen with problem--->src/test/screenshots/screen73.png
+13:01:14.714 INFO  manager.MyListener - Start find element--->By.xpath: //button[text()='Ok']
+13:01:19.762 INFO  manager.MyListener - The element  with locator--->By.xpath: //button[text()='Ok']<---was found
+13:01:19.763 INFO  tests.Methods - Finish test--->public void tests.RegistrationTests.regSuccessWrongPasswordModel()
+13:01:19.764 INFO  tests.Methods - Start test --->public void tests.AddNewCarTest.addNewCarSuccess()
+13:01:19.764 INFO  manager.MyListener - Start find element--->By.xpath: //*[text()=' Logout ']
+13:01:25.702 INFO  manager.MyListener - This is the link to screen with problem--->src/test/screenshots/screen84.png
+13:01:26.203 INFO  manager.MyListener - Start find element--->By.xpath: //*[text()=' Logout ']
+13:01:32.129 INFO  manager.MyListener - This is the link to screen with problem--->src/test/screenshots/screen91.png
+13:01:32.130 INFO  tests.Methods - Finish test--->public void tests.AddNewCarTest.addNewCarSuccess()
+13:01:32.133 INFO  tests.Methods - Start test --->public void tests.AddNewCarTest.addNewCarSuccessWithDataProvider(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+13:01:32.134 INFO  tests.Methods - Finish test--->public void tests.AddNewCarTest.addNewCarSuccessWithDataProvider(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)
+13:01:32.135 INFO  tests.Methods - Start test --->public void tests.SearchTests.searchAnyPeriod()
+13:01:32.136 INFO  manager.MyListener - Start find element--->By.cssSelector: [alt='logo']
+13:01:32.146 INFO  manager.MyListener - The element  with locator--->By.cssSelector: [alt='logo']<---was found
+13:01:32.374 INFO  manager.MyListener - Start find element--->By.id: city
+13:01:32.385 INFO  manager.MyListener - The element  with locator--->By.id: city<---was found
+13:01:32.970 INFO  manager.MyListener - Start find element--->By.cssSelector: .pac-item
+13:01:33.351 INFO  manager.MyListener - The element  with locator--->By.cssSelector: .pac-item<---was found
+13:01:37.149 INFO  manager.MyListener - Start find element--->By.id: dates
+13:01:37.156 INFO  tests.Methods - Finish test--->public void tests.SearchTests.searchAnyPeriod()
+13:01:37.157 INFO  tests.Methods - Start test --->public void tests.SearchTests.searchAnyPeriodWithMyData(java.lang.String,java.lang.String,java.lang.String)
+13:01:37.157 INFO  manager.MyListener - Start find element--->By.cssSelector: [alt='logo']
+13:01:37.162 INFO  tests.Methods - Finish test--->public void tests.SearchTests.searchAnyPeriodWithMyData(java.lang.String,java.lang.String,java.lang.String)
+13:01:37.163 INFO  tests.Methods - Start test --->public void tests.SearchTests.searchAnyPeriodWithMyData(java.lang.String,java.lang.String,java.lang.String)
+13:01:37.165 INFO  tests.Methods - Finish test--->public void tests.SearchTests.searchAnyPeriodWithMyData(java.lang.String,java.lang.String,java.lang.String)
+13:01:37.165 INFO  tests.Methods - Start test --->public void tests.SearchTests.searchCurrentMonth()
+13:01:37.167 INFO  tests.Methods - Finish test--->public void tests.SearchTests.searchCurrentMonth()
+13:01:37.167 INFO  tests.Methods - Start test --->public void tests.SearchTests.searchCurrentMonthInPast()
+13:01:37.168 INFO  tests.Methods - Finish test--->public void tests.SearchTests.searchCurrentMonthInPast()

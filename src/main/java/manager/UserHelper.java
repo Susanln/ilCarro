@@ -11,6 +11,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class UserHelper extends HelperBase{
+    WebDriverWait wait = new WebDriverWait(wd,10);
+
     public UserHelper(WebDriver wd) {
         super(wd);
     }
@@ -54,9 +56,6 @@ public class UserHelper extends HelperBase{
     public String checkMessage() {
         new WebDriverWait(wd, 5)
                 .until(ExpectedConditions.visibilityOf(wd.findElement(By.cssSelector(".dialog-container h2"))));
-
-
-
         String message = wd.findElement(By.cssSelector(".dialog-container h2")).getText();
         System.out.println(message);
         return  message;
@@ -104,4 +103,7 @@ public class UserHelper extends HelperBase{
     }
 
 
+    public boolean isLoginUnsuccess() {
+        return wd.findElements(By.xpath("//*[text()=' Logout ']")).size()==0;
+    }
 }

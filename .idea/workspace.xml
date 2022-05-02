@@ -6,7 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="08699bc7-1290-474f-ad43-604bfbecc3f2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/manager/SearchHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/manager/SearchHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/manager/ApplicationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/manager/ApplicationManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/manager/UserHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/manager/UserHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/AddNewCarTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/AddNewCarTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/Methods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/Methods.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/tests/RegistrationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/RegistrationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -68,7 +72,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Qa_32_PhoneBook" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
@@ -77,8 +81,8 @@
       <recent name="manager" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.SearchTests.searchCurrentMonthInPast">
-    <configuration name="RegistrationTests.regSuccessWithMyListener" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.AddNewCarTest.addNewCarSuccessWithDataProvider">
+    <configuration name="AddNewCarTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -91,7 +95,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;tests.RegistrationTests.regSuccessWithMyListener&quot;" />
+            <option value="&quot;tests.AddNewCarTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -101,7 +105,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="SearchTests.searchAnyPeriodWithMyData" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="AddNewCarTest.addNewCarSuccessWithDataProvider" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -114,7 +118,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;tests.SearchTests.searchAnyPeriodWithMyData&quot;" />
+            <option value="&quot;tests.AddNewCarTest.addNewCarSuccessWithDataProvider&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -193,11 +197,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.AddNewCarTest.addNewCarSuccessWithDataProvider" />
+        <item itemvalue="Gradle.Tests in 'tests'" />
+        <item itemvalue="Gradle.AddNewCarTest" />
         <item itemvalue="Gradle.SearchTests.searchCurrentMonthInPast" />
         <item itemvalue="Gradle.Tests in 'ilCarro.test'" />
-        <item itemvalue="Gradle.Tests in 'tests'" />
-        <item itemvalue="Gradle.SearchTests.searchAnyPeriodWithMyData" />
-        <item itemvalue="Gradle.RegistrationTests.regSuccessWithMyListener" />
       </list>
     </recent_temporary>
   </component>
